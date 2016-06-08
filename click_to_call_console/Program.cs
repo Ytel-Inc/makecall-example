@@ -11,8 +11,8 @@ namespace click_to_call_console
     class Program
     {
         static Msg360APIRestClient Client;
-        public const string AuthToken = "12326d269b259b79db789";   // Your Token
-        public const string AccountSid = "abc-080c-49ab-bbe4-xyz";  // Your AccountSID
+        public const string AuthToken = "1acff5853c8f26d269b259b79db3ebb1";   // Your Token
+        public const string AccountSid = "5fd7e139-080c-49ab-bbe4-7c9f686dc64e";  // Your AccountSID
         public const string ResponseFormat = ".xml";
         public const string BaseUrl = "https://api.message360.com/api/";
 
@@ -24,14 +24,14 @@ namespace click_to_call_console
 
 
 
-            string strCRMUserID = "5005"; // Fake Sales Agent UserID
-            string strSalesNumber = "9493515555"; // Sales Agent Phone Number
-            string strCustomerNumber = "800382999"; // Customer Phone Number
-            string strMessage360Number = "9994576819"; // Message360 owned Phone Number or confirmed number
+            string strCRMUserID = "5005"; // Fake Insellerate Sales Agent UserID
+            string strSalesNumber = "9493518878"; // Sales Agent Phone Number
+            string strCustomerNumber = "8003824913"; // Customer Phone Number
+            string strMessage360Number = "3234576819"; // Message360 owned Phone Number or confirmed number
 
             //Set outbound call options
             CallOptions co = new CallOptions();
-            string strUrl = "https://customapps.message360.com/test/irtdial.php?phone=" + strMessage360Number + "&customer=" + strCustomerNumber + "&name=John";  // The URL that will load after the call in answered, this will contain my InboundXML that has my <dial> tag, I just added in a static name
+            string strUrl = "https://customapps.message360.com/test/inselleratedial.php?phone=" + strMessage360Number + "&customer=" + strCustomerNumber + "&name=John";  // The URL that will load after the call in answered, this will contain my InboundXML that has my <dial> tag, I just added in a static name
             /*
 
             On the page that the url posts to I will get the below data:
@@ -42,10 +42,10 @@ namespace click_to_call_console
             city	Capistrano Valley
             CallSid	7ce6be7a-c1ed-e285-69ad-xyz
             AccountSid	abc-080c-49ab-bbe4-xyz
-            From	9994576819
-            To	9493515555
-            phone	9994576819
-            customer	800382999
+            From	3234576819
+            To	9496827724
+            phone	3234576819
+            customer	8003824913
             name	John
 
             My output at that url is:
